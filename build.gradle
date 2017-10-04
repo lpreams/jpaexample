@@ -1,0 +1,13 @@
+apply plugin: 'java-library'
+repositories {
+    jcenter()
+}
+dependencies {
+    api 'org.apache.commons:commons-math3:3.6.1'
+    implementation 'com.google.guava:guava:21.0'
+    testImplementation 'junit:junit:4.12'
+    
+    compile 'org.hibernate:hibernate-core:5.2.11.Final' // JPA implementation, change at your own peril
+    compile group: 'com.h2database', name: 'h2', version: '1.4.196' // you'll probably want to change this to MySQL, but H2 is pretty simple
+}
+
